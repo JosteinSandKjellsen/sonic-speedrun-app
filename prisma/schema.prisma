@@ -13,7 +13,6 @@ model Score {
   id        Int      @id @default(autoincrement())
   name      String
   email     String
-  time      Int
-  rings     Int
+  time      BigInt
   createdAt DateTime @default(now())
 }

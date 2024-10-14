@@ -9,9 +9,15 @@ export async function getTopScores(limit: number = 100) {
     return await prisma.score.findMany({
       take: limit,
       orderBy: [
-        { time: 'asc' },
-        { rings: 'desc' }
-      ]
+        { time: 'asc' }
+      ],
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        time: true,
+        createdAt: true
+      }
     });
   } catch (error) {
     console.error('Error fetching scores:', error);
@@ -19,14 +25,13 @@ export async function getTopScores(limit: number = 100) {
   }
 }
 
-export async function addScore(name: string, email: string, time: number, rings: number) {
+export async function addScore(name: string, email: string, time: number) {
   try {
     return await prisma.score.create({
       data: {
         name,
         email,
-        time,
-        rings
+        time: BigInt(time)
       }
     });
   } catch (error) {

@@ -1,11 +1,11 @@
-# Sonic Speedrun Scoreboard
+# Sonic Superstars Speedrun Scoreboard
 
-This project is a web application that allows users to view, add, and delete speedrun scores for Sonic the Hedgehog's Green Hill Zone - Act 1. It's built using SvelteKit, TypeScript, and Prisma with SQLite.
+This project is a web application that allows users to view, add, and delete speedrun scores for Sonic Superstars' Bridge Island: Act 1. It's built using SvelteKit, TypeScript, and Prisma with SQLite.
 
 ## Features
 
 - View top 100 speedrun scores
-- Add new scores
+- Add new scores with precision up to milliseconds
 - Delete scores (password protected)
 - Responsive design
 
@@ -23,21 +23,18 @@ These prerequisites apply to all operating systems (Windows, macOS, and Linux).
 Follow these steps to get your development environment set up:
 
 1. Clone the repository
-
-   ```bash
-   git clone https://github.com/JosteinSandKjellsen/sonic-speedrun-scoreboard.git
-   cd sonic-speedrun-scoreboard
+   ```
+   git clone https://github.com/yourusername/sonic-superstars-speedrun-scoreboard.git
+   cd sonic-superstars-speedrun-scoreboard
    ```
 
 2. Install dependencies
-
-   ```bash
+   ```
    npm install
    ```
 
 3. Set up the database
-
-   ```bash
+   ```
    npx prisma generate
    npx prisma db push
    ```
@@ -46,7 +43,7 @@ Follow these steps to get your development environment set up:
 
 To run the application in development mode:
 
-```bash
+```
 npm run dev
 ```
 
@@ -56,13 +53,13 @@ This will start the development server. Open your browser and navigate to `http:
 
 To create a production build:
 
-```bash
+```
 npm run build
 ```
 
 To preview the production build:
 
-```bash
+```
 npm run preview
 ```
 
@@ -95,8 +92,7 @@ npm run preview
 
 - You can install Node.js using your distribution's package manager or using [nvm](https://github.com/nvm-sh/nvm).
 - Ensure you have the necessary build tools installed. On Ubuntu or Debian, you can install them with:
-
-  ```bash
+  ```
   sudo apt-get install build-essential
   ```
 
